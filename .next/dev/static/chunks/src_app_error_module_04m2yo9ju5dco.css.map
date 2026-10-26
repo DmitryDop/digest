@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/dmitry/Project/digest/src/app/error.module.css"],"sourcesContent":[".page {\n  display: grid;\n  min-height: 100vh;\n  place-items: center;\n  padding-block: 48px;\n}\n\n.inner {\n  max-width: 520px;\n}\n\n.kicker {\n  margin: 0 0 16px;\n  color: var(--text-tertiary);\n  font-size: 10px;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n}\n\n.title {\n  margin: 0;\n  font-size: clamp(30px, 5vw, 48px);\n  font-weight: 540;\n  letter-spacing: -0.045em;\n  line-height: 1.06;\n}\n\n.text {\n  margin: 16px 0 0;\n  color: var(--text-secondary);\n  font-size: 15px;\n  line-height: 1.6;\n}\n\n.action {\n  margin-top: 28px;\n  padding: 12px 18px;\n  border: 1px solid var(--line-strong);\n  border-radius: 7px;\n  background: transparent;\n  color: var(--text);\n  cursor: pointer;\n  font-size: 13px;\n  transition:\n    border-color 180ms var(--ease),\n    background-color 180ms var(--ease);\n}\n\n.action:hover {\n  border-color: var(--accent-line);\n  background: var(--accent-soft);\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;AAIA;;;;;;;;;AASA;;;;;;;;AAQA;;;;;;;AAOA;;;;;;;;;;;;AAcA"}}]
+}

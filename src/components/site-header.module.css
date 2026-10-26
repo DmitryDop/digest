@@ -1,0 +1,155 @@
+.header {
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  gap: 32px;
+}
+
+.brand {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms var(--ease);
+}
+
+.brand:hover {
+  color: var(--accent-strong);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.navLink {
+  position: relative;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 450;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+  transition:
+    color 180ms var(--ease),
+    background-color 180ms var(--ease);
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+}
+
+.navLink[data-active="true"] {
+  color: var(--text);
+}
+
+.navLink[data-active="true"]::after {
+  position: absolute;
+  right: 11px;
+  bottom: 2px;
+  left: 11px;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  opacity: 0.9;
+}
+
+.menuButton {
+  display: none;
+  min-height: 40px;
+  margin-left: auto;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  transition:
+    border-color 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.menuButton:hover {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.mobilePanel {
+  border-top: 1px solid var(--line);
+  animation: panelIn 180ms var(--ease);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding-block: 12px 18px;
+}
+
+.mobileNavLink {
+  padding: 12px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 15px;
+  text-align: left;
+}
+
+.mobileNavLink:last-child {
+  border-bottom: 0;
+}
+
+.mobileNavLink[data-active="true"] {
+  color: var(--accent-strong);
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 880px) {
+  .inner {
+    min-height: 68px;
+    gap: 16px;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobilePanel {
+    animation: none;
+  }
+}
